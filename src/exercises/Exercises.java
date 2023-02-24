@@ -31,9 +31,11 @@ public class Exercises {
         System.out.println("Exercise 2:");
         List<String> studentNames = Arrays.asList("Alice", "Aragon", "Alex");
         List<Integer> studentAges = Arrays.asList(23, 31, 38);
+        List<Student> users = Arrays.asList();
 
         for (int index = 0; index < studentNames.size(); index++) {
-           System.out.println(createNewStudent(studentNames.get(index),studentAges.get(index)));
+           Student user = createNewStudent(studentNames.get(index),studentAges.get(index));
+           users.add(user);
         }
     }
 
@@ -60,8 +62,22 @@ public class Exercises {
 
     private static void exercise3() {
         System.out.println("\nExercise 3:");
+        List<String> studentNames = Arrays.asList("Alice", "Aragon", "Alex");
+        List<Integer> studentAges = Arrays.asList(23, 31, 38);
 
+        Course javaCourse = new Course();
+        javaCourse.courseName = "Java";
+        javaCourse.maxStudents = 25;
+        javaCourse.qualityRatingOutOf10 = 8;
+        javaCourse.durationCourseInMonths = 6;
+        javaCourse.areStudentsAdult = true;
+        List<Student> users = Arrays.asList();
 
+        for (int index = 0; index < studentNames.size(); index++) {
+            Student user = createNewStudent(studentNames.get(index),studentAges.get(index));
+            users.add(user);
+        }
+        javaCourse.students = users;
     }
 }
 
