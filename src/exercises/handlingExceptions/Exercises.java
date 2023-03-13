@@ -83,11 +83,10 @@ public class Exercises {
         System.out.println("\nExercise 4: ");
         // Your code here
 
-        Double num1 = 10.0;
-        String num2AsString = "0.0";
-        Exception DivideByZeroException = new Exception();
+        int num1 = 10;
+        String num2AsString = "0";
         try{
-        System.out.println(num1/Double.parseDouble(num2AsString));
+        System.out.println(num1/Integer.parseInt(num2AsString));
         }catch(NumberFormatException numberFormatException){
             numberFormatException.printStackTrace();
             System.err.println("This is not a double");
