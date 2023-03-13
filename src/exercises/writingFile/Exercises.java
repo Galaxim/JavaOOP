@@ -31,6 +31,7 @@ public class Exercises {
                 The quick brown fox jumps over the lazy dog
                 """;
 
+
         try {
 
             Files.writeString(MY_PATH,myString);
@@ -71,13 +72,15 @@ public class Exercises {
 
         try {
             // Your code here
-            String str =Files.readString(Path.of("file.txt")).toString();
-            System.out.println(str.split("\n "));
+            String str =Files.readString(Path.of("file.txt"));
+            String[] lines = str.split("\n");
+            System.out.println("Number of lines in file: " + lines.length);
         } catch (Exception exception) {
             System.err.println("There was an error!");
             exception.printStackTrace();
             System.exit(0);
         }
+
     }
 
     /**
