@@ -82,15 +82,12 @@ public class Exercises {
     private static void exercise3() {
         // 3a. Find the min and max values in the Set below
         Set<Integer> numbers = Set.of(1, 2, 3, 4, 5, 6, 7, 8, 9, 10);
-        int max = Integer.MAX_VALUE;
-        int min = Integer.MIN_VALUE;
+        int max = Integer.MIN_VALUE;
+        int min = Integer.MAX_VALUE;
 
 
         for (Integer number : numbers) {
-            if(max == Integer.MAX_VALUE && min == Integer.MIN_VALUE){
-                max = number;
-                min = number;
-            } else if (max < number){
+            if (max < number){
                 max = number;
             } else if (min >number){
                 min = number;
@@ -102,7 +99,7 @@ public class Exercises {
         }
 
         // 3b. Find which items from set a are also in set b, add these to itemsContainedInBothSets
-        //     use the `contains` method and "nested" for loop
+        //     use the `contains` method or "nested" for loop
         Set<Integer> setA = Set.of(1, 2, 3, 4, 5, 6, 7, 8, 9, 10);
         Set<Integer> setB = Set.of(5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15);
         Set<Integer> itemsContainedInBothSets = new HashSet<>();
