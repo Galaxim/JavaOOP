@@ -58,41 +58,17 @@ public class Exercises {
         // Write code to count the number of occurrences of each word in the String `words`
         // and store the counts in the Map `wordCount`, note you will need to first get the previous value
         // from the Map and then increment it by 1, if no previous value exists, use 0 as the previous value.
-
-
-
-        int valueThe = 0;
-        int valueFox = 0;
-        int valueAnd = 0;
-        int valueLazy = 0;
-        int valueDog = 0;
-        int valueSaw = 0;
-        int valueAnother = 0;
-        int valueWith =  0;
-        int valueNot = 0;
-        for(String word : words){
-            switch (word){
-                case "the"-> valueThe ++;
-                case "fox"-> valueFox ++;
-                case "and"-> valueAnd ++;
-                case "lazy"-> valueLazy ++;
-                case "dog"-> valueDog ++;
-                case "saw"-> valueSaw ++;
-                case "another"-> valueAnother ++;
-                case "with"-> valueWith ++;
-                case "not"-> valueNot ++;
-            }
+        for (String word : words) {
+            int count = wordCount.getOrDefault(word, 0);
+            wordCount.put(word, count + 1);
         }
-        wordCount.put("the",valueThe);
-        wordCount.put("fox",valueFox);
-        wordCount.put("and",valueAnd);
-        wordCount.put("lazy",valueLazy);
-        wordCount.put("dog",valueDog);
-        wordCount.put("saw",valueSaw);
-        wordCount.put("another",valueAnother);
-        wordCount.put("with",valueWith);
-        wordCount.put("not",valueNot);
+
+
         System.out.println(wordCount);
+
+
+
+
     }
 
 /**
