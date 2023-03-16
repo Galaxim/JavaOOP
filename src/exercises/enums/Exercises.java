@@ -1,5 +1,7 @@
 package exercises.enums;
 
+import java.time.MonthDay;
+
 public class Exercises {
     public static void main(String[] args) {
         exercise1();
@@ -25,17 +27,32 @@ public class Exercises {
      */
     private static void exercise1() {
         System.out.println("\nExercise 1: ");
-        enum Days{
-            MONDAY,TUESDAY,WEDNESDAY,THURSDAY,FRIDAY,SATURDAY,SUNDAY
-        }
+
         // Your code here
         for (Enum day :Days.values()){
             System.out.println(day);
         }
     }
     public enum Days{
-        MONDAY,TUESDAY,WEDNESDAY,THURSDAY,FRIDAY,SATURDAY,SUNDAY;
-        public static boolean isWeekend;
+        MONDAY(false),
+        TUESDAY(false),
+        WEDNESDAY(false),
+        THURSDAY(false),
+        FRIDAY(false),
+        SATURDAY(true),
+        SUNDAY(true);
+        private boolean isWeekend;
+        Days(boolean isWeekend){
+            this.isWeekend=isWeekend;
+        }
+
+        public boolean isWeekend() {
+            return isWeekend;
+        }
+
+        public void setWeekend(boolean weekend) {
+            isWeekend = weekend;
+        }
     }
 
     /**
@@ -102,20 +119,13 @@ public class Exercises {
      */
     private static void exercise4() {
         System.out.println("\nExercise 4: ");
-        Days.FRIDAY.isWeekend =false;
-        Days.MONDAY.isWeekend =false;
-        Days.WEDNESDAY.isWeekend =false;
-        Days.THURSDAY.isWeekend =false;
-        Days.TUESDAY.isWeekend =false;
-        Days.SUNDAY.isWeekend =true;
-        Days.SATURDAY.isWeekend =true;
-        weekendOrWeekday(Days.SUNDAY);
-    }
-    public static void weekendOrWeekday(Days day){
-        if(Days.isWeekend == true ){
+        if (Days.FRIDAY.isWeekend){
             System.out.println("Weekend");
         } else System.out.println("Weekday");
+
+
     }
+
 
     /**
      * 5:
