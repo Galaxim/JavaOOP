@@ -16,8 +16,7 @@ public class Fish extends Animal {
         this.species = species;
     }
 
-    public double swimSpeedMetersPerSecond(Fish fish){
-        setWeight(getWeight() *2);
-        return getWeight();
+    public double swimSpeedMetersPerSecond(){;
+        return getWeight() * 2;
     }
 }

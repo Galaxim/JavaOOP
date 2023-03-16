@@ -15,8 +15,7 @@ public class Bird extends Animal{
     public void setWingspan(double wingspan) {
         this.wingspan = wingspan;
     }
-    public double flySpeedMetersPerSecond(Bird bird){
-        setWingspan(getWingspan() *4);
-        return getWingspan();
+    public double flySpeedMetersPerSecond(){
+        return getWingspan() * 4;
     }
 }

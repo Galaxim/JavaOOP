@@ -14,8 +14,8 @@ public class Dog extends Animal{
     public void setBreed(String breed) {
         this.breed = breed;
     }
-    public double runSpeedMetersPerSecond(Dog dog){
-        dog.setHeight(getHeight() * 2);
-        return dog.getHeight();
+    public double runSpeedMetersPerSecond(){
+
+        return getHeight() * 2;
     }
 }

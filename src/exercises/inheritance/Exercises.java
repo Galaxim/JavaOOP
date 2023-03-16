@@ -57,12 +57,12 @@ public class Exercises {
         Dog entei=new Dog(210,198,"No, because it's legendary");
         Bird corviknigkt= new Bird(220,75,400);
         Fish magikarp= new Fish(90,10,"Pokemon");
-        System.out.println(entei.runSpeedMetersPerSecond(entei));
-        System.out.println(magikarp.swimSpeedMetersPerSecond(magikarp));
-        System.out.println(corviknigkt.flySpeedMetersPerSecond(corviknigkt));
-        if (entei.runSpeedMetersPerSecond(entei)> magikarp.swimSpeedMetersPerSecond(magikarp) && entei.runSpeedMetersPerSecond(entei)> corviknigkt.flySpeedMetersPerSecond(corviknigkt)){
+        System.out.println(entei.runSpeedMetersPerSecond());
+        System.out.println(magikarp.swimSpeedMetersPerSecond());
+        System.out.println(corviknigkt.flySpeedMetersPerSecond());
+        if (entei.runSpeedMetersPerSecond()> magikarp.swimSpeedMetersPerSecond() && entei.runSpeedMetersPerSecond()> corviknigkt.flySpeedMetersPerSecond()){
             System.out.println("The animal with the fastest movement speed is entei");
-        } else if (corviknigkt.flySpeedMetersPerSecond(corviknigkt)> entei.runSpeedMetersPerSecond(entei) && corviknigkt.flySpeedMetersPerSecond(corviknigkt)> magikarp.swimSpeedMetersPerSecond(magikarp)){
+        } else if (corviknigkt.flySpeedMetersPerSecond()> entei.runSpeedMetersPerSecond() && corviknigkt.flySpeedMetersPerSecond()> magikarp.swimSpeedMetersPerSecond()){
             System.out.println("The animal with the fastest movement speed is corviknight");
         } else System.out.println("The animal with the fastest movement speed is magikarp");
 
