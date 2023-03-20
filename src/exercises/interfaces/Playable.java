@@ -1,5 +1,5 @@
 package exercises.interfaces;
 
 public interface Playable {
-    abstract String play();
+    public abstract String play();
 }

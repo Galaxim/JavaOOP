@@ -22,7 +22,7 @@ public class Exercises {
     private static void exercise1() {
         System.out.println("\nExercise 1: ");
         Rectangle superRectangle=new Rectangle(7,4);
-        Circle sun = new Circle(6,34);
+        Circle sun = new Circle(6);
         System.out.println(superRectangle.calculateArea());
         System.out.println(sun.calculateArea());
     }

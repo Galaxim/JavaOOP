@@ -8,6 +8,6 @@ public class Rectangle extends Shape{
 
     @Override
     double calculateArea() {
-        return Math.PI * Math.pow((getHeight() / 2), 2);
+        return getHeight() * getWidth();
     }
 }
