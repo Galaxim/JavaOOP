@@ -15,7 +15,7 @@ public class Exercises {
 
     private List<Integer> ourNumbers = IntStream.range(1, 10).boxed().toList();
     public static void evenNumbers(List<Integer> example){
-        example.stream().filter(Integer ->Integer % 2 ==0).forEach(Integer->{System.out.println(Integer);});
+        example.stream().filter(Gino ->Gino % 2 ==0).forEach(Gino->{System.out.println(Gino);});
     }
 
     /**
@@ -51,7 +51,7 @@ public class Exercises {
     private static void exercise2() {
         System.out.println("\nExercise 2: ");
         List<Integer> ourNumbers = IntStream.range(1, 10).boxed().toList();
-        System.out.println(ourNumbers.stream().filter(Integer-> Integer % 2 !=0).collect(Collectors.toSet()));
+        System.out.println(ourNumbers.stream().filter(Gino-> Gino % 2 !=0).collect(Collectors.toSet()));
     }
 
     /**
@@ -87,7 +87,7 @@ public class Exercises {
     private static void exercise4() {
         System.out.println("\nExercise 4");
         List<Integer> ourNumbers = IntStream.range(1, 10).boxed().toList();
-        System.out.println(ourNumbers.stream().filter(Integer-> Integer % 2 == 0).map(Integer->Integer *2).collect(Collectors.toSet()));
+        System.out.println(ourNumbers.stream().filter(Gino-> Gino % 2 == 0).map(Gino->Gino *2).collect(Collectors.toSet()));
     }
 }
 
